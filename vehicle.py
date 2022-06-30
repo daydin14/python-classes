@@ -24,6 +24,10 @@ class Vehicle():
     
     def __str__(self):
         return f'Vehicle VIN({self.vin}) is a {self.make} {self.model}'
+    
+    @classmethod
+    def get_total_vehicles(cls):
+        return f'There are currently {cls.vehicle_id-1} vehicle objects'
 
 myCar = Vehicle('14', 'Dodge', 'Hellcat')
 print(myCar.vin, myCar.make, myCar.model)
@@ -46,3 +50,5 @@ print(plane.__dict__)
 
 super_bike = Vehicle('xyz-456', 'BMW', 's1000rr')
 print(super_bike.__dict__)
+
+print('\n' + Vehicle.get_total_vehicles() + '\n')
