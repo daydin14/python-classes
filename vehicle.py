@@ -1,10 +1,17 @@
 class Vehicle():
+    """" Could be done like this too:
+        def __init__(self, vin, make, model):
+            self.vin = vin
+            self.make = make
+            self.model = model
+            self.running = False
+    """
     def __init__(self, vin, make, model, running=False):
         self.vin = vin
         self.make = make
         self.model = model
         self.running = running
-    
+
     def start(self):
         self.running = True
     
